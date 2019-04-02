@@ -13,7 +13,7 @@ public class PlaygroundTest {
 
     @Before
     public void before() {
-        playground = new Playground("Johny Walker");
+        playground = new Playground("Johny Walker",3);
 
     }
     @Test
@@ -29,5 +29,9 @@ public class PlaygroundTest {
     public void canImplementAgeRestrictioIfTrue() {
         visitor = new Visitor(14, 170, 45.00);
         assertEquals(true, playground.isAllowedTo(visitor));
+    }
+    @Test
+    public void hasRating() {
+        assertEquals(3, playground.getRating());
     }
 }

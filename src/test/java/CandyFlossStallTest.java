@@ -10,7 +10,7 @@ public class CandyFlossStallTest {
 
     @Before
     public void before() {
-        candyFlossStall = new CandyFlossStall("Stall","Johny Bee", 4);
+        candyFlossStall = new CandyFlossStall("Stall","Johny Bee", 4,3);
     }
 
     @Test
@@ -25,5 +25,9 @@ public class CandyFlossStallTest {
     @Test
     public void hasParkingSlot() {
         assertEquals(4, candyFlossStall.getParkingSpot());
+    }
+    @Test
+    public void hasRating() {
+        assertEquals(3, candyFlossStall.getRating());
     }
 }

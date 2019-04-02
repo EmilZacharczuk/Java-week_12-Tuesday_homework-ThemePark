@@ -1,14 +1,15 @@
 package Attractions;
 
 
-public abstract class Attraction {
-    private String name;
+import interfaces.IReviewed;
 
-    public Attraction(String name) {
+public abstract class Attraction implements IReviewed {
+    protected String name;
+    protected int rating;
+
+    public Attraction(String name, int rating) {
         this.name = name;
-    }
-    public String getName(){
-        return this.name;
+        this.rating = rating;
     }
 
 }

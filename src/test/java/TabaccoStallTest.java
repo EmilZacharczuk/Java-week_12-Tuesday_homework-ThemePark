@@ -15,7 +15,7 @@ public class TabaccoStallTest {
 
     @Before
     public void before() {
-        tabaccoStall = new TabaccoStall("Stall","Johny Bee", 4);
+        tabaccoStall = new TabaccoStall("Stall","Johny Bee", 4,4);
     }
 
     @Test
@@ -40,5 +40,9 @@ public class TabaccoStallTest {
     public void canImplementAgeRestrictioIfTrue() {
         visitor = new Visitor(18, 170, 45.00);
         Assert.assertEquals(true, tabaccoStall.isAllowedTo(visitor));
+    }
+    @Test
+    public void hasRating() {
+        assertEquals(4, tabaccoStall.getRating());
     }
 }

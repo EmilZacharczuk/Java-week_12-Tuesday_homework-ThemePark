@@ -13,7 +13,7 @@ public class RollercoasterTest {
 
         @Before
         public void before() {
-            rollercoaster = new Rollercoaster("Johny Walker");
+            rollercoaster = new Rollercoaster("Johny Walker",3);
         }
         @Test
         public void hasName() {
@@ -29,5 +29,9 @@ public class RollercoasterTest {
     public void canImplementAgeRestrictioIfTrue() {
         visitor = new Visitor(14, 140, 45.00);
         assertEquals(false, rollercoaster.isAllowedTo(visitor));
+    }
+    @Test
+    public void hasRating() {
+        assertEquals(3, rollercoaster.getRating());
     }
     }

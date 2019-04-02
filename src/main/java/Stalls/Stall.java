@@ -1,18 +1,18 @@
 package Stalls;
 
-public abstract class Stall {
-    private String name;
+import interfaces.IReviewed;
+
+public abstract class Stall implements IReviewed {
+    protected String name;
     private String ownerName;
     private int parkingSpot;
+    protected int rating;
 
-    public Stall(String name, String ownerName, int parkingSpot) {
+    public Stall(String name, String ownerName, int parkingSpot, int rating) {
         this.name = name;
         this.ownerName = ownerName;
         this.parkingSpot = parkingSpot;
-    }
-
-    public String getName() {
-        return name;
+        this.rating = rating;
     }
 
     public String getOwnerName() {

@@ -5,8 +5,8 @@ import interfaces.ISecurity;
 
 public class Rollercoaster extends Attraction implements ISecurity {
 
-    public Rollercoaster(String name) {
-        super(name);
+    public Rollercoaster(String name, int rating) {
+        super(name,rating);
     }
 
     public boolean isAllowedTo(Visitor visitor) {
@@ -14,5 +14,12 @@ public class Rollercoaster extends Attraction implements ISecurity {
         return true;}else{
             return false;
             }
+    }
+
+    public int getRating() {
+        return rating;
+    }
+    public String getName() {
+        return name;
     }
 }
